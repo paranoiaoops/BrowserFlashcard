@@ -1,0 +1,17 @@
+name: e2eTest
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    working-directory: e2e
+    steps:
+      - uses: actions/checkout@v2
+      - name: install
+        run: npm install
+      - name: test
+        run: npm test
