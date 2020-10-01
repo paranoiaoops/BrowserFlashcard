@@ -8,7 +8,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    working-directory: ./e2e
+    defaults:
+      run:
+        working-directory: ./e2e
     steps:
       - uses: actions/checkout@v2
       - name: install
