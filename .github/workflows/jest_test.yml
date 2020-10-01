@@ -9,8 +9,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: echo test
-        run: echo "hoge fuga"
       - uses: actions/checkout@v2
       - name: install
         run: npm install
